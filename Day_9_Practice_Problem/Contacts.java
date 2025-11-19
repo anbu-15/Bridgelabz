@@ -66,6 +66,9 @@ public class Contacts {
         this.pinCode = pinCode;
     }
 
+    public Contacts() {
+    }
+
     public Contacts(String firstName, String lastName, String email, String address, String city, String phoneNo, String pinCode) {
         this.firstName = firstName;
         this.lastName = lastName;

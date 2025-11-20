@@ -40,7 +40,7 @@ public class Stock {
         this.sharePrice = sharePrice;
     }
 
-    // ⭐ Total value of this stock: shares × price
+    // Total value of this stock: shares × price
     public float getTotalValue() {
         return noOfStock * sharePrice;
     }

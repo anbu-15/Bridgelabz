@@ -10,6 +10,6 @@ public class MaxGenericClass <T extends Comparable<T>>{
     }
 
     public T findMax() {
-        return MinMaxNumber.maxValue(a, b, c);
+        return MaxNumber.maxValue(a, b, c);
     }
 }

@@ -7,6 +7,9 @@ public class SingleLinkedList {
     private int length;
 
     //Constructor
+    public SingleLinkedList() {
+
+    }
     public SingleLinkedList(int value) {
         Node newNode = new Node(value);
         head = newNode;
@@ -47,6 +50,7 @@ public class SingleLinkedList {
         length++;
     }
 
+    //Remove Last value in the List
     public Node removeLast() {
         if (length == 0) return null;
         Node temp = head;
@@ -58,6 +62,32 @@ public class SingleLinkedList {
         }
         prev.next = null;
         tail = prev;
+        length--;
+        if (length == 0) {
+            head = null;
+            tail = null;
+        }
+        return temp;
+    }
+
+    //Prepend Add a value in the Start
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
+    }
+
+    public Node removeFirst() {
+        if (length == 0) return null;
+        Node temp = head;
+        head = temp.next;
+        temp.next = null;
         length--;
         if (length == 0) {
             head = null;

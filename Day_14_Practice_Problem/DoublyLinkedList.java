@@ -10,7 +10,7 @@ public class DoublyLinkedList {
         Node newNode = new Node(value);
         head = newNode;
         tail = newNode;
-        length=1;
+        length = 1;
     }
 
     class Node {
@@ -23,11 +23,34 @@ public class DoublyLinkedList {
         }
     }
 
-    public void printList(){
-        Node temp=head;
-        while(temp.next!=null){
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
+        length++;
+    }
+
+    public Node removeLast() {
+        if (length == 0) return null;
+        Node temp = tail;
+        tail=temp.prev;
+        tail.next=null;
+        temp.prev=null;
+        length--;
+        return temp;
+    }
+
+    public void printList() {
+        Node temp = head;
+        while (temp != null) {
             System.out.print(temp.value + " ");
-            temp=temp.next;
+            temp = temp.next;
         }
     }
 

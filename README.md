@@ -20,4 +20,4 @@
 ![Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME)
 
 ## 📫 Connect with Me
-- LinkedIn: linkedin.com/in/anbarasu-a-623a05249
+- LinkedIn: [linkedin.com/in/anbarasu-a-623a05249](https://www.linkedin.com/in/anbarasu-a-623a05249/)

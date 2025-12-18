@@ -69,7 +69,6 @@ public class StreamTest {
                 .forEach(System.out::println);
 
 
-
         // ===== TERMINAL OPERATIONS =====
 
         System.out.println("\n===== COLLECT =====");

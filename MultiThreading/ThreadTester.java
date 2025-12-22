@@ -9,7 +9,12 @@ public class ThreadTester {
 //        thread1.setDaemon(true);
         thread1.start();
 
-        Thread thread2 = new Thread(new Thread2(), "Thread2");
+        Thread thread2 = new Thread(()->
+        {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("inside : " + Thread.currentThread() +" : "+ i);
+            }
+        }, "Thread2");
         thread2.start();
 
         System.out.println("Main is Exiting");

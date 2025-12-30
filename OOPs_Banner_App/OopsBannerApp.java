@@ -6,13 +6,16 @@ public class OopsBannerApp {
         uc1();
         uc2();
         uc3();
+        uc4();
     }
 
+    // ========================== UC1 ==========================
     public static void uc1() {
         String str = "OOPS";
         System.out.println(str);
     }
 
+    // ========================== UC2 ==========================
     public static void uc2() {
         String[] O = {
                 "  *****  ",
@@ -51,6 +54,7 @@ public class OopsBannerApp {
         }
     }
 
+    // ========================== UC3 ==========================
     private static void uc3() {
         String[][] patterns = {
                 getOPattern(),
@@ -105,6 +109,48 @@ public class OopsBannerApp {
                 line = line + letter[row] + " ";
             }
             System.out.println(line);
+        }
+    }
+
+    // ========================== UC4 ==========================
+    private static void uc4() {
+
+        BannerCharacter[] characters = {
+                new BannerCharacter('O', getOPattern()),
+                new BannerCharacter('O', getOPattern()),
+                new BannerCharacter('P', getPPattern()),
+                new BannerCharacter('S', getSPattern())
+        };
+
+        printBannerUC4(characters);
+    }
+
+    // Inner Class for Encapsulation
+    static class BannerCharacter {
+        private char character;
+        private String[] pattern;
+
+        public BannerCharacter(char character, String[] pattern) {
+            this.character = character;
+            this.pattern = pattern;
+        }
+
+        public char getCharacter() {
+            return character;
+        }
+
+        public String[] getPattern() {
+            return pattern;
+        }
+    }
+
+    private static void printBannerUC4(BannerCharacter[] characters) {
+        for (int row = 0; row < 7; row++) {
+            StringBuilder line = new StringBuilder();
+            for (BannerCharacter ch : characters) {
+                line.append(ch.getPattern()[row]).append(" ");
+            }
+            System.out.println(line.toString());
         }
     }
 }
